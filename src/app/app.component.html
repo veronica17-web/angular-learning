@@ -1,0 +1,14 @@
+<h1>hello {{ memberName }}</h1>
+<input type="text" [(ngModel)]="language" />
+
+<button (click)="addLanguage()">add</button>
+<button (click)="deleteFirst()">Delete First</button>
+<h3>list of langiages</h3>
+<ul>
+  @for(lang of listOfLanguage ; track lang){
+  <li>{{ lang }}</li>
+  }
+</ul>
+
+@if(listOfLanguage.length >2 ){
+<strong>congrats !! u know more than 3 languages</strong>}
